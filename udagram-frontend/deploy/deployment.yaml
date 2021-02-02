@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: udagram-frontend
-        image: dcollioni/udagram-frontend
+        image: dcollioni/udagram-frontend:0.0.1
         imagePullPolicy: Always
         ports:
         - containerPort: 80
