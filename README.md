@@ -77,7 +77,7 @@ Create an AWS S3 bucket. Set the config values for environment variables prefixe
 - Application is deployed at:
     - http://aa48ffa390330450f8d65c2568c98bf4-228038281.eu-west-1.elb.amazonaws.com/
 
-- Screenshots can be found at [screenshots](#screenshots).
+- Screenshots can be found at [screenshots](/screenshots).
 
 ### udagram-api-feed
 To run the application, create a `.env` file in the root directory with the following keys:
