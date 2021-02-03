@@ -72,3 +72,87 @@ Create an AWS S3 bucket. Set the config values for environment variables prefixe
     npm audit fix
     ```
 5. In `set_env.sh`, environment variables are set with `export $VAR=value`. Setting it this way is not permanent; every time you open a new terminal, you will have to run `set_env.sh` to reconfigure your environment variables. To verify if your environment variable is set, you can check the variable with a command like `echo $POSTGRES_USERNAME`.
+
+## Solution
+- Application is deployed at:
+    - http://aa48ffa390330450f8d65c2568c98bf4-228038281.eu-west-1.elb.amazonaws.com/
+
+- Screenshots can be found at [screenshots](#screenshots).
+
+### udagram-api-feed
+To run the application, create a `.env` file in the root directory with the following keys:
+```
+POSTGRES_USERNAME=
+POSTGRES_PASSWORD=
+POSTGRES_DB=
+POSTGRES_HOST=
+AWS_REGION=
+AWS_PROFILE=
+AWS_BUCKET=
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+JWT_SECRET=
+URL=
+```
+
+To deploy the application, run:
+1. `kubectl apply -f deploy/`
+2. `./deploy/create-secret.sh`
+
+### udagram-api-user
+To run the application, create a `.env` file in the root directory with the following keys:
+```
+POSTGRES_USERNAME=
+POSTGRES_PASSWORD=
+POSTGRES_DB=
+POSTGRES_HOST=
+AWS_REGION=
+AWS_PROFILE=
+AWS_BUCKET=
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+JWT_SECRET=
+URL=
+```
+
+Then run:
+1. `npm run dev`
+
+To deploy the application, run:
+1. `kubectl apply -f deploy/`
+2. `./deploy/create-secret.sh`
+
+### udagram-api-user
+To run the application, create a `.env` file in the root directory with the following keys:
+```
+POSTGRES_USERNAME=
+POSTGRES_PASSWORD=
+POSTGRES_DB=
+POSTGRES_HOST=
+AWS_REGION=
+AWS_PROFILE=
+AWS_BUCKET=
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+JWT_SECRET=
+URL=
+```
+
+Then run:
+1. `npm run dev`
+
+To deploy the application, run:
+1. `kubectl apply -f deploy/`
+2. `./deploy/create-secret.sh`
+
+### udagram-frontend
+To run the application, run
+1. `ionic build`
+2. `ionic serve`
+
+To deploy the application, run:
+1. `kubectl apply -f deploy/`
+
+### udagram-reverse-proxy
+To deploy the application, run:
+1. `kubectl apply -f deploy/`
