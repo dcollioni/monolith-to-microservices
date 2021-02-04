@@ -15,5 +15,3 @@ spec:
     app: udagram-api-user
   sessionAffinity: None
   type: ClusterIP
-status:
-  loadBalancer: {}

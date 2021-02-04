@@ -14,6 +14,4 @@ spec:
   selector:
     app: udagram-frontend
   sessionAffinity: None
-  type: ClusterIP
-status:
-  loadBalancer: {}
+  type: LoadBalancer
